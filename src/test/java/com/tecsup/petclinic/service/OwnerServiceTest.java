@@ -34,34 +34,34 @@ public class OwnerServiceTest {
 		owner = owners.get(0);
 		
 		Assert.assertEquals(OWNER_FIRST_NAME, owner.getFirstName());
-		logger.info("Owner with name '" + OWNER_FIRST_NAME + "' found.");
+		logger.info("Propietario de nombre '" + OWNER_FIRST_NAME + "' encotrado.");
 	}
 	
 	@Test
 	public void testFindByLastName() {
-		String OWNER_LAST_NAME = "Coleman";
+		String OWNER_LAST_NAME = "Black";
 		Owner owner;
 		List<Owner> owners = ownerService.findByLastName(OWNER_LAST_NAME);
 		owner = owners.get(0);
 		
 		Assert.assertEquals(OWNER_LAST_NAME, owner.getLastName());
-		logger.info("Propietario con su nombre '" + OWNER_LAST_NAME + "'se encontro.");
+		logger.info("Apellido del Propietario '" + OWNER_LAST_NAME + "Encontrado");
 	}
 	
 	@Test
 	public void testFindByAddress() {
-		String OWNER_CITY = "Madison";
+		String OWNER_CITY = "Monona";
 		Owner owner;
 		List<Owner> owners = ownerService.findByCity(OWNER_CITY);
 		owner = owners.get(0);
 		
 		Assert.assertEquals(OWNER_CITY, owner.getCity());
-		logger.info("Owner with city '" + OWNER_CITY + "' found.");
+		logger.info("Se encontro por ciudad '" + OWNER_CITY + "");
 	}
 	
 	//@Test
 	public void testDelete() throws OwnerNotFoundException {
-		Long OWNER_ID = 14L;//
+		Long OWNER_ID = 10L;//
 		
 		ownerService.delete(OWNER_ID);
 		
@@ -74,9 +74,9 @@ public class OwnerServiceTest {
 	
 	@Test
 	public void testCreateAndFind() {
-		String OWNER_FIRST_NAME = "Alexander";
-		String OWNER_LAST_NAME = "Misayauri";
-		String OWNER_CITY = "Huancayo";
+		String OWNER_FIRST_NAME = "Leonid";
+		String OWNER_LAST_NAME = "Cubas";
+		String OWNER_CITY = "Lima";
 		
 		Owner simpleOwner = new Owner(OWNER_FIRST_NAME, OWNER_LAST_NAME, OWNER_CITY);
 		
